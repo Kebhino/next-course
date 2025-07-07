@@ -11,12 +11,14 @@
   "dependencies": {
     "autoprefixer": "^10.4.21",
     "daisyui": "^5.0.43",
+    "fast-sort": "^3.4.1",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/codemod": "^15.4.0-canary.116",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20",
     "@types/react": "^19",
