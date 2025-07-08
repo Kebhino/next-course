@@ -1,12 +1,14 @@
 import Link from "next/link";
 import UserTable from "./new/UserTable";
+import { Suspense } from "react";
 
 interface Props {
   searchParams: Promise<{ sortOrder: string }>;
 }
 
 const UsersPage = async (props: Props) => {
-  console.log("UsersPage", (await props.searchParams).sortOrder);
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+  await delay(3000);
 
   return (
     <>
@@ -15,7 +17,9 @@ const UsersPage = async (props: Props) => {
         {" "}
         New User
       </Link>
-      <UserTable sortOrder={(await props.searchParams).sortOrder} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <UserTable sortOrder={(await props.searchParams).sortOrder} />
+      </Suspense>
     </>
   );
 };
