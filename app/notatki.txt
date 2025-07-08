@@ -1,0 +1,2 @@
+Next za pierwzym razem jak wchodzimy na strone pobiera wszystko co moze i wrzuca i robi tak zwany prefetch. 
+Trzyma tez w cache stron które odwiedziliśmy w cache u klienta. 
