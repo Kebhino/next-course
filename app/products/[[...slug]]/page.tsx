@@ -1,3 +1,5 @@
+import AddToCart from "@/app/components/AddToCart";
+import ListaProduktow from "@/app/components/PokazProdukty";
 import React from "react";
 
 interface Props {
@@ -10,7 +12,8 @@ interface Props {
 const ProductPage = async (props: Props) => {
   return (
     <div>
-      {" "}ProductPage {(await props.params).slug} {(await props.searchParams).sortOrder}
+      <AddToCart />
+      <ListaProduktow />
     </div>
   );
 };
